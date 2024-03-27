@@ -30,7 +30,7 @@ fun HomeScreen(navController: NavController) {
             style = MaterialTheme.typography.headlineLarge,
             fontSize = MaterialTheme.typography.headlineLarge.fontSize,
             fontFamily = MaterialTheme.typography.headlineLarge.fontFamily,
-            fontWeight = FontWeight.Bold
+            fontWeight = FontWeight.Normal
         )
     }
 }
