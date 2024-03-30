@@ -8,8 +8,8 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.mertlinux.componenttestlearning.DetailScreen
-import com.mertlinux.componenttestlearning.HomeScreen
+import com.mertlinux.componenttestlearning.screen.DetailScreen
+import com.mertlinux.componenttestlearning.screen.HomeScreen
 
 @Composable
 fun SetupNavGraph(navController: NavController){

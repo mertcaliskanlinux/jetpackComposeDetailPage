@@ -1,4 +1,4 @@
-package com.mertlinux.componenttestlearning
+package com.mertlinux.componenttestlearning.screen
 
 
 import androidx.compose.foundation.clickable
