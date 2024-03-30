@@ -3,20 +3,50 @@ package com.mertlinux.componenttestlearning.graph
 
 const val DETAIL_ARGUMENT_KEY = "id" // DETAIL_SCREEN_KEY değişkenine "id" değerini atar // const ne işe yarar ? Sabit bir değer oluşturur ve bu değeri değiştiremezsiniz
 const val DETAIL_ARGUMENT_NAME = "name" // DETAIL_SCREEN_NAME değişkenine "name" değerini atar
-
+const val AUTHENTİCATION_ROOT = "authentication"
+const val HOME_ROOT = "home" //
+const val ROUTE_ROOT = "root"
 sealed class Screen(val route:String) {
-    // burası ne yapar ? HomeScreen sınıfını çağırır ve route parametresine "home_screen" değerini verir ne işe yarar ? Screen sınıfını miras alan Home ve Detail sınıflarını oluşturur ve route parametresine değer verir
     object Home : Screen(route = "home_screen")
 
-    //multi optional argument
     object Detail : Screen("detail_screen?id={$DETAIL_ARGUMENT_KEY}&name={$DETAIL_ARGUMENT_NAME}") {
         fun passedId(id: Int = 0,name:String="defance"): String {
             return this.route.replace("{$DETAIL_ARGUMENT_KEY}",id.toString()).replace("{$DETAIL_ARGUMENT_NAME}",name) //burası ne yapar ? route değişkenindeki "{$DETAIL_ARGUMENT_KEY}" ve "{$DETAIL_ARGUMENT_NAME}" değerlerini id ve name değerleri ile değiştirir ve döndürür
         }
     }
 
+    object Login : Screen(route = "login_screen")
+    object SignUp : Screen(route = "sign_up_screen")
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.mertlinux.componenttestlearning.graph.HOME_ROOT
 import com.mertlinux.componenttestlearning.graph.Screen
 
 
@@ -29,7 +30,7 @@ fun LoginScreen(navController : NavController) {
         ) {
             Text(
                 modifier = Modifier
-                    .clickable { navController.navigate(Screen.Home.route) }
+                    .clickable { navController.navigate(HOME_ROOT) }
                     .align(Alignment.Center),
                 text = "Login",
                 color = MaterialTheme.colorScheme.primary,
@@ -41,8 +42,11 @@ fun LoginScreen(navController : NavController) {
             Text(
                 modifier = Modifier
                     .padding(top = 150.dp)
-                    .clickable {  },
-                text = "Go to Back Screen",
+                    .clickable {
+                        navController.popBackStack()
+                        navController.navigate(Screen.Detail.passedId(1,"mert"))
+                    },
+                text = "Open Detail Screen",
                 color = MaterialTheme.colorScheme.secondary,
                 style = MaterialTheme.typography.labelLarge,
                 fontSize = MaterialTheme.typography.bodyLarge.fontSize,

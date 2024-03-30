@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.mertlinux.componenttestlearning.graph.SetupNavGraph
+import com.mertlinux.componenttestlearning.graph.nav_graph.SetupNavGraph
 import com.mertlinux.componenttestlearning.ui.theme.ComponentTestLearningTheme
 
 class MainActivity : ComponentActivity() {

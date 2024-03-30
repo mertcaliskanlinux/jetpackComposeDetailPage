@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.mertlinux.componenttestlearning.graph.AUTHENTİCATION_ROOT
 import com.mertlinux.componenttestlearning.graph.Screen
 
 
@@ -37,7 +38,9 @@ fun HomeScreen(navController: NavController) {
         Text(
             modifier = Modifier
                 .padding(top = 150.dp)
-                .clickable { },
+                .clickable {
+                    navController.navigate(AUTHENTİCATION_ROOT)
+                },
             text = "Login/SingUp",
             color = MaterialTheme.colorScheme.secondary,
             style = MaterialTheme.typography.labelLarge,
